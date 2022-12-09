@@ -1,6 +1,6 @@
 ﻿namespace ControllerRestDemo.DAL
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private UserContext _userContext;
 
@@ -36,11 +36,6 @@
         public UnitOfWork(UserContext userContext)
         {
             _userContext = userContext;
-        }
-
-        public void Save()
-        {
-            _userContext.SaveChanges();
         }
     }
 }

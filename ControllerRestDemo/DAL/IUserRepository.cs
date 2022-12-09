@@ -4,8 +4,8 @@ namespace ControllerRestDemo.DAL;
 
 public interface IUserRepository
 {
-    void Create(User user);
-    ICollection<User> GetAllUsers();
+    bool Create(User user);
+    IEnumerable<User> GetAllUsers();
     User? GetUser(int id);
     ICollection<Group>? GetUserGroups(int id);
     bool UpdateUser(int id, User user);
